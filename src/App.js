@@ -4,7 +4,7 @@ import './App.css';
 import Card from './Card';
 import searchIcon from './searchIcon.svg';
 
-const API_URL = 'http://www.omdbapi.com?apikey=d8bbb368';
+const API_URL = 'https://www.omdbapi.com?apikey=d8bbb368';
 
 const App = () => {
     const [Movies,setMovies] = useState([]);
@@ -33,13 +33,16 @@ const App = () => {
         
 
         {
-            Movies?.length > 0 ? (<div className='container'>
-            {Movies.map((movie0)=> (<Card movie={movie0}/>))}
-        </div>) : (
-            <div className='empty'>
-                <h2>No movies found</h2>
-            </div>
-        )
+            Movies?.length > 0 ? 
+            (<div className='container'>
+                
+                {Movies.map((movie0)=> (<Card movie={movie0}/>))}
+                
+            </div>) 
+                : 
+                (<div className='empty'>
+                    <h2>No movies found</h2>
+                </div>)
         }
 
         

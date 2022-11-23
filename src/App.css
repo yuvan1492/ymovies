@@ -147,7 +147,8 @@ h1 {
   width: 100%;
   opacity: 0;
   top: 0;
-  color: #ffffff;
+  font-weight: 500;
+  color: #f5c833;
 }
 
 .movie:hover {
